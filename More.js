@@ -3,7 +3,13 @@ var thisfunc = function() {
   console.log("6 times 7 is ", result);
 }
 function multiply (a, b) {
-  console.log("a * b is: "+ a*b);
+  var result = a*b;
+  console.log("a * b is: ", result);
   return a*b;
 }
 multiply(4,5);
+
+function subtract() {
+  var result = 5-4;
+  console.log("5-4 is: ", result);
+}
