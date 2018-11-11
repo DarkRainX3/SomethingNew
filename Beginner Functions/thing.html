@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body {
+                margin: 20px;
+                background-color: rgb(0, 0, 0);
+            }
+            .output {
+                border-style: solid;
+                border-width: 2px;
+                border-color: blue;
+                padding: 5px;
+            }
+            <p style="color:red">
+        </style>
+    </head>
+
+    <body>
+        <h1 style="color:red">Area of Triangle</h1>
+        <p>
+            <font color="white">Base: </font>
+            <input type="text" size="4" id="base">
+            <font color="white">Height: </font>
+            <input type="text" size="4" id="height">
+            <br>
+            <button type="button" onclick="area()">AREA</button>
+        </p>
+        <p style="color:white" class="output" id="output">Area = ??</p>
+        <h2>Celcius to Fahrenheit</h2>
+        <p>
+            <font color="white">C: </font>
+            <input type="text" size="4" id="cel">
+            <font color="white">F: </font>
+            <input type="text" size="4" id="fah">
+            <br>
+            <button type="button" onclick="convert()" id="convertButton">Convert</button>
+            <p style="color:white" class="output" id="conversion"> Degrees</p>
+        </p>
+        <script src="Functions.js"></script>
+    </body>
+</html>
