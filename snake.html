@@ -1,17 +1,15 @@
 <p id="speedout">Speed:</p>
 <canvas id="gc" width="400" height="400"></canvas>
 <script>
-var speed = 5;
-
 window.onload = function() {
   canv = document.getElementById("gc");
   ctx = canv.getContext("2d");
   document.addEventListener("keydown",keyPush);
   //interval = setInterval(game,1000/speed);
-  setTimeout(game,1000);
+  setTimeout(game,200);
   var speedout = document.getElementById('speed');
-  speedout.textContent = 'lalala';
 }
+var speed = 5;  //snake speed
 xv = yv = 0;    // x,y velocity
 px=py=10;   //player position
 gs = 20;   //gridsize
@@ -87,27 +85,51 @@ function checkPos(x,y) {
     return false;
 }
 function keyPush(e) {
-  switch(e.keyCode) {
-    case 37:
+    if (e.keyCode==37){
         if(xv==1)
-            break;
+            return;
         xv=-1;yv=0;
-        break;
-    case 38:
+            return;
+    }
+    else if (e.keyCode==38){
         if(yv==1)
-            break;
+            return;
         xv=0;yv=-1;
-        break;
-    case 39:
+            return;
+    }
+    else if (e.keyCode==39){
         if(xv==-1)
-            break;
+            return;
         xv=1;yv=0;
-        break;
-    case 40:
+            return;
+    }
+    else if (e.keyCode==40){
         if(yv==-1)
-            break;
+            return;
         xv=0;yv=1;
-        break;
-  }
+            return;
+    }
+  // switch(e.keyCode) {
+  //   case 37:
+  //       if(xv==1)
+  //           break;
+  //       xv=-1;yv=0;
+  //       break;
+  //   case 38:
+  //       if(yv==1)
+  //           break;
+  //       xv=0;yv=-1;
+  //       break;
+  //   case 39:
+  //       if(xv==-1)
+  //           break;
+  //       xv=1;yv=0;
+  //       break;
+  //   case 40:
+  //       if(yv==-1)
+  //           break;
+  //       xv=0;yv=1;
+  //       break;
+  // }
 }
 </script>
