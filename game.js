@@ -1,3 +1,12 @@
+//custom css to something
+//console.log(document.querySelector(".selectMe").style);
+var link = document.querySelector(".selectMe");
+link.style.color = 'blue';
+link.style.backgroundColor = 'red'; // properties with - are changed to camelCase
+link.style.cssText = "padding : 0.5em; color: white; background-color:red; "// or can just type in css code
+//can also do this
+//link.setAttribute('style', 'padding:2em')
+
 var canvas;
 var ctx;
 var ballX = 50;
@@ -19,7 +28,7 @@ var showWinScreen = false;
 var winner = 0;
 
 window.onload = function() {
-    console.log('lalala');
+    //console.log('lalala');
     canv = document.getElementById("gameCanvas");
     ctx = canv.getContext("2d");
     canv.addEventListener('mousedown', handleMouseClick);
